@@ -30,7 +30,7 @@ if [ -z "${PKG}" ]; then
     echo "PKG must be set"
     exit 1
 fi
-if [ -z "${ARCH}" ]; then
+if [ -z "${TARGETARCH}" ]; then
     echo "ARCH must be set"
     exit 1
 fi
@@ -40,7 +40,7 @@ if [ -z "${VERSION}" ]; then
 fi
 
 export CGO_ENABLED=0
-export GOARCH="${ARCH}"
+export GOARCH="${TARGETARCH}"
 export GO111MODULE=on
 
 (
