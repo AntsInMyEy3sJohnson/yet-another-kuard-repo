@@ -29,3 +29,7 @@ _testmain.go
 /.*-container
 /.*-dockerfile
 /.*-image
+
+# Exclude directories IDEs might introduce
+*.vscode
+*.idea
