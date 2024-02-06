@@ -13,6 +13,11 @@ WORKDIR /go/src/github.com/kubernetes-up-and-running/kuard
 COPY . .
 
 # To be filled by build tools such as buildx
+# Sample build command:
+# docker buildx build --push --platform linux/amd64,linux/arm64 \
+#    --tag antsinmyey3sjohnson/yet-another-kuard-image:1.0.1 \
+#    --tag antsinmyey3sjohnson/yet-another-kuard-image:latest \
+#    .
 ARG TARGETOS TARGETARCH
 
 # This is a set of variables that the build script expects
